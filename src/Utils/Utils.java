@@ -2,6 +2,7 @@ package Utils;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -11,6 +12,8 @@ import java.util.Arrays;
  */
 @SuppressWarnings("all")
 public final class Utils {
+
+
     /**
      * un metodo per leggere la data che il server che ci ha inviato
      * @param socket {@link Socket}
@@ -41,9 +44,23 @@ public final class Utils {
      * @return avg
      */
     public static double avg(double... numbers){
-        return Arrays.stream(numbers).filter(n -> n != 0).average().getAsDouble();
+        return Arrays.stream(Arrays.copyOfRange(numbers,0, search(numbers, 0))).average().getAsDouble();
     }
 
+
+    /**
+     * helper function to serch an element in array
+     * @param array
+     * @param element
+     * @return the index of element if exists else the size of array
+     */
+    public static int search(double[] array, double element){
+        for (int index = 0; index < array.length; index++)
+            if (array[index] == element)
+                return index;
+
+       return array.length;
+    }
 
     /**
      * funzione per togliere gli spazi e creare un array di numeri ,
