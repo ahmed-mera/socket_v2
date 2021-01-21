@@ -1,8 +1,10 @@
 package Utils;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -56,6 +58,7 @@ public final class Utils {
      * @return the index of element if exists else the size of array
      */
     public static int search(double[] array, double element){
+
         for (int index = 0; index < array.length; index++)
             if (array[index] == element)
                 return index;
