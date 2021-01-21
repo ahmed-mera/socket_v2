@@ -44,7 +44,8 @@ public final class Utils {
      * @return avg
      */
     public static double avg(double... numbers){
-        return Arrays.stream(Arrays.copyOfRange(numbers,0, search(numbers, 0))).average().getAsDouble();
+//        return Arrays.stream(Arrays.copyOfRange(numbers,0, search(numbers, 0))).average().getAsDouble();
+        return Arrays.stream(numbers).filter(n -> n != 0).average().getAsDouble();
     }
 
 
@@ -61,6 +62,7 @@ public final class Utils {
 
        return array.length;
     }
+
 
     /**
      * funzione per togliere gli spazi e creare un array di numeri ,
