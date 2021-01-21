@@ -71,7 +71,7 @@ public final class Utils {
      */
     public static void executeUtils(){
         try{ if (!(System.getProperty("os.name").contains("Windows"))) Runtime.getRuntime().exec("chmod +x out/production/utils.sh");
-            Process p = Runtime.getRuntime().exec((System.getProperty("os.name").contains("Windows")) ?  "out/production/utils.bat" : "out/production/utils.sh");
+            Runtime.getRuntime().exec((System.getProperty("os.name").contains("Windows")) ?  "out/production/utils.bat" : "out/production/utils.sh");
         }catch(IOException e){ };
     }
 
