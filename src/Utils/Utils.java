@@ -87,15 +87,6 @@ public final class Utils {
     }
 
 
-    /**
-     * function to execute class Utils
-     * @throws IOException genera una eccezione del tipo comunicativo
-     */
-    public static void executeUtils(){
-        try{ if (!(System.getProperty("os.name").contains("Windows"))) Runtime.getRuntime().exec("chmod +x out/production/utils.sh");
-            Runtime.getRuntime().exec((System.getProperty("os.name").contains("Windows")) ?  "out/production/utils.bat" : "out/production/utils.sh");
-        }catch(IOException e){ };
-    }
 
 
     /**
