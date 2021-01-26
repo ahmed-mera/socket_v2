@@ -35,7 +35,7 @@ public class Server {
      * constructore to instance Utils
      */
     public Server() throws IOException {
-        Utils.executeUtils();
+        System.out.println("\t Server Started \n");
     }
 
     /**
