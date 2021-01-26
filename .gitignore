@@ -28,6 +28,7 @@ hs_err_pid*
 .DS_Store
 .AppleDouble
 .LSOverride
+out/
 
 # Icon must end with two \r
 Icon
